@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AlMajami Store</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- شاشة التحميل -->
+
+<div id="loader">
+
+<div class="loader-spinner"></div>
+
+<p>جاري تحميل المتجر...</p>
+
+</div>
+
+<!-- رأس الصفحة -->
+
+<header class="header">
+<a href="login.html" class="admin-btn">
+    <i class="fas fa-user-shield"></i>
+    الإدارة
+</a>
+<div class="logo-box">
+
+<img
+id="logo"
+src="images/logo.png"
+alt="Logo">
+
+<div>
+
+<h1 id="storeName">
+
+AlMajami Store
+
+</h1>
+
+<p id="storeDescription">
+
+متجر الإلكترونيات
+
+</p>
+
+</div>
+
+</div>
+
+<div class="header-icons">
+
+<a href="cart.html" class="cart-link">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cartCount">0</span>
+
+</a>
+
+</div>
+
+</header>
+
+<!-- البنر -->
+
+<section class="banner">
+
+<img
+id="bannerImage"
+src="images/banner.jpg"
+alt="Banner">
+
+</section>
+<!-- ==========================================
+     البحث
+========================================== -->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 ابحث عن منتج...">
+
+<button id="searchBtn">
+
+بحث
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     التصنيفات
+========================================== -->
+
+<section class="categories-section">
+
+<h2>
+
+📂 التصنيفات
+
+</h2>
+
+<div
+id="categories"
+class="categories">
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     المنتجات المميزة
+========================================== -->
+
+<section class="products-section">
+
+<h2>
+
+⭐ المنتجات المميزة
+
+</h2>
+
+<div
+id="featuredProducts"
+class="products-grid">
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     أحدث المنتجات
+========================================== -->
+
+<section class="products-section">
+
+<h2>
+
+🆕 أحدث المنتجات
+
+</h2>
+
+<div
+id="newProducts"
+class="products-grid">
+
+</div>
+
+</section>
+<!-- ==========================================
+     جميع المنتجات
+========================================== -->
+
+<section class="products-section">
+
+<h2>
+
+🛍️ جميع المنتجات
+
+</h2>
+
+<div
+id="allProducts"
+class="products-grid">
+
+<div style="text-align:center;padding:40px;color:#888;">
+
+جاري تحميل المنتجات...
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     الفوتر
+========================================== -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<h3 id="footerStoreName">
+
+AlMajami Store
+
+</h3>
+
+<p id="footerDescription">
+
+متجر متخصص في بيع الهواتف والإلكترونيات والإكسسوارات.
+
+</p>
+
+<div class="social-links">
+
+<a
+id="facebookLink"
+href="#"
+target="_blank">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a
+id="instagramLink"
+href="#"
+target="_blank">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a
+id="telegramLink"
+href="#"
+target="_blank">
+
+<i class="fab fa-telegram"></i>
+
+</a>
+
+<a
+id="youtubeLink"
+href="#"
+target="_blank">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</footer>
+<!-- ==========================================
+     زر واتساب العائم
+========================================== -->
+
+<a
+id="whatsappButton"
+class="whatsapp-float"
+href="#"
+target="_blank"
+title="تواصل عبر واتساب">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- ==========================================
+     زر الرجوع للأعلى
+========================================== -->
+
+<button
+id="topButton"
+class="top-button"
+title="الرجوع للأعلى">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<!-- ==========================================
+     ملفات JavaScript
+========================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/database.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

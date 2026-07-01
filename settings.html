@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>إعدادات المتجر | AlMajami Store</title>
+
+<link rel="stylesheet"
+href="css/admin.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="content">
+
+<h1>
+
+⚙️ إعدادات المتجر
+
+</h1>
+
+<div class="card">
+
+<h2>
+
+بيانات المتجر
+
+</h2>
+
+<label>اسم المتجر</label>
+
+<input
+type="text"
+id="storeName">
+
+<label>وصف المتجر</label>
+
+<textarea
+id="storeDescription">
+</textarea>
+<h2>
+
+🖼️ الشعار والبنر
+
+</h2>
+
+<label>شعار المتجر</label>
+
+<input
+type="file"
+id="storeLogo"
+accept="image/*">
+
+<img
+id="logoPreview"
+src="images/logo.png"
+style="
+width:120px;
+height:120px;
+margin:15px 0;
+border-radius:12px;
+object-fit:cover;
+border:1px solid #ddd;
+">
+
+<label>بنر المتجر</label>
+
+<input
+type="file"
+id="storeBanner"
+accept="image/*">
+
+<img
+id="bannerPreview"
+src="images/banner.jpg"
+style="
+width:100%;
+max-width:500px;
+margin:15px 0;
+border-radius:12px;
+object-fit:cover;
+border:1px solid #ddd;
+">
+<h2>
+
+🎨 ألوان المتجر
+
+</h2>
+
+<label>
+
+اللون الرئيسي
+
+</label>
+
+<input
+type="color"
+id="primaryColor">
+
+<label>
+
+اللون الثانوي
+
+</label>
+
+<input
+type="color"
+id="secondaryColor">
+
+<label>
+
+لون الخلفية
+
+</label>
+
+<input
+type="color"
+id="backgroundColor">
+
+<label>
+
+لون النص
+
+</label>
+
+<input
+type="color"
+id="textColor">
+
+</div>
+
+<div class="card">
+
+<h2>
+
+👁️ معاينة الألوان
+
+</h2>
+
+<p>
+
+يمكنك تغيير الألوان وستظهر المعاينة مباشرة قبل حفظ الإعدادات.
+
+</p>
+
+</div>
+<div class="card">
+
+<h2>
+
+🌐 روابط التواصل
+
+</h2>
+
+<label>
+
+واتساب
+
+</label>
+
+<input
+type="text"
+id="whatsapp"
+placeholder="https://wa.me/967xxxxxxxxx">
+
+<label>
+
+فيسبوك
+
+</label>
+
+<input
+type="text"
+id="facebook"
+placeholder="https://facebook.com/...">
+
+<label>
+
+إنستغرام
+
+</label>
+
+<input
+type="text"
+id="instagram"
+placeholder="https://instagram.com/...">
+
+<label>
+
+تيليجرام
+
+</label>
+
+<input
+type="text"
+id="telegram"
+placeholder="https://t.me/...">
+
+<label>
+
+يوتيوب
+
+</label>
+
+<input
+type="text"
+id="youtube"
+placeholder="https://youtube.com/...">
+
+</div>
+<div class="card">
+
+<h2>
+
+💾 حفظ الإعدادات
+
+</h2>
+
+<div style="
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+">
+
+<button
+id="saveSettings"
+style="
+flex:1;
+padding:14px;
+background:#198754;
+color:#fff;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+">
+
+💾 حفظ الإعدادات
+
+</button>
+
+<button
+id="resetSettings"
+style="
+flex:1;
+padding:14px;
+background:#dc3545;
+color:#fff;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+">
+
+🔄 استعادة الافتراضي
+
+</button>
+
+<a
+href="admin.html"
+style="
+flex:1;
+padding:14px;
+background:#0d6efd;
+color:#fff;
+text-align:center;
+text-decoration:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+">
+
+⬅️ الرجوع للوحة الإدارة
+
+</a>
+
+</div>
+
+</div>
+</div>
+
+<!-- ==========================================
+     ملفات JavaScript
+========================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/database.js"></script>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>سلة المشتريات | AlMajami Store</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cart.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="cart-container">
+
+<h1>🛒 سلة المشتريات</h1>
+
+<a href="index.html" class="back-btn">
+⬅ العودة للمتجر
+</a>
+
+<!-- المنتجات -->
+<div id="cartItems"></div>
+
+<!-- بيانات العميل -->
+<div class="customer-form">
+
+<h2>بيانات العميل</h2>
+
+<input
+type="text"
+id="customerName"
+placeholder="الاسم الكامل">
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="رقم الهاتف">
+
+<textarea
+id="customerAddress"
+placeholder="العنوان (اختياري)">
+</textarea>
+
+</div>
+
+<!-- الإجمالي -->
+<div class="cart-total">
+
+<h2>
+الإجمالي:
+<span id="cartTotal">0</span>
+ريال
+</h2>
+
+</div>
+
+<!-- زر إرسال الطلب -->
+<button id="sendOrder">
+
+📲 إرسال الطلب عبر واتساب
+
+</button>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/database.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+</html>ج

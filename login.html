@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>تسجيل الدخول | AlMajami Store</title>
+
+<link rel="stylesheet"
+href="css/login.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-card">
+
+<img
+src="images/logo.png"
+class="login-logo"
+alt="Logo">
+
+<h1>
+
+تسجيل دخول الإدارة
+
+</h1>
+
+<p>
+
+يرجى إدخال بيانات الدخول للمتابعة
+
+</p>
+<form id="loginForm">
+
+<label>
+
+اسم المستخدم
+
+</label>
+
+<div class="input-group">
+
+<i class="fas fa-user"></i>
+
+<input
+type="text"
+id="username"
+placeholder="أدخل اسم المستخدم"
+autocomplete="username"
+required>
+
+</div>
+
+<label>
+
+كلمة المرور
+
+</label>
+
+<div class="input-group">
+
+<i class="fas fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="أدخل كلمة المرور"
+autocomplete="current-password"
+required>
+
+</div>
+
+<div class="login-options">
+
+<label>
+
+<input
+type="checkbox"
+id="showPassword">
+
+إظهار كلمة المرور
+
+</label>
+
+</div>
+
+<button
+type="submit"
+id="loginButton">
+
+<i class="fas fa-right-to-bracket"></i>
+
+تسجيل الدخول
+
+</button>
+
+</form>
+<div
+id="loginError"
+class="login-error"
+style="display:none;">
+
+<i class="fas fa-circle-exclamation"></i>
+
+<span>
+
+اسم المستخدم أو كلمة المرور غير صحيحة.
+
+</span>
+
+</div>
+
+<div class="login-footer">
+
+<p>
+
+الإصدار
+
+<b>V6 Professional</b>
+
+</p>
+
+<p>
+
+© AlMajami Store
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+<!-- ملفات JavaScript -->
+
+<script src="js/config.js"></script>
+
+<script src="js/database.js"></script>
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>لوحة التحكم | AlMajami Store V6</title>
+
+<link rel="stylesheet"
+href="css/admin.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+<!-- القائمة الجانبية -->
+
+<aside class="sidebar">
+
+<div class="sidebar-header">
+
+<img
+id="adminLogo"
+src="images/logo.png"
+alt="Logo">
+
+<h2>AlMajami Store</h2>
+
+<p>لوحة الإدارة</p>
+
+</div>
+
+<nav>
+
+<button onclick="showPage('dashboard')">
+
+<i class="fas fa-chart-line"></i>
+
+الرئيسية
+
+</button>
+
+<button onclick="showPage('products')">
+
+<i class="fas fa-box-open"></i>
+
+المنتجات
+
+</button>
+
+<button onclick="showPage('categories')">
+
+<i class="fas fa-tags"></i>
+
+التصنيفات
+
+</button>
+
+<button onclick="showPage('orders')">
+
+<i class="fas fa-cart-shopping"></i>
+
+الطلبات
+
+</button>
+
+<button onclick="showPage('settings')">
+
+<i class="fas fa-gear"></i>
+
+الإعدادات
+
+</button>
+
+<button onclick="showPage('social')">
+
+<i class="fas fa-globe"></i>
+
+التواصل
+
+</button>
+
+<button onclick="logout()">
+
+<i class="fas fa-right-from-bracket"></i>
+
+تسجيل الخروج
+
+</button>
+
+</nav>
+
+</aside>
+
+<main class="content">
+
+<header class="topbar">
+
+<h1>
+
+لوحة التحكم
+
+</h1>
+
+</header>
+
+<!-- الصفحة الرئيسية -->
+
+<section
+id="dashboard"
+class="page">
+
+<h2>
+
+📊 لوحة الإحصائيات
+
+</h2>
+
+<div class="stats-grid">
+  <div class="card">
+    <h3 id="productsCount">0</h3>
+    <p>عدد المنتجات</p>
+</div>
+
+<div class="card">
+    <h3 id="categoriesCount">0</h3>
+    <p>عدد التصنيفات</p>
+</div>
+
+<div class="card">
+    <h3 id="featuredCount">0</h3>
+    <p>المنتجات المميزة</p>
+</div>
+
+<div class="card">
+    <h3 id="newCount">0</h3>
+    <p>المنتجات الجديدة</p>
+</div>
+
+<div class="card">
+    <h3 id="ordersCount">0</h3>
+    <p>عدد الطلبات</p>
+</div>
+
+<div class="card">
+    <h3 id="totalSales">0</h3>
+    <p>إجمالي المبيعات</p>
+</div>
+
+<div class="card">
+    <h3 id="totalItems">0</h3>
+    <p>إجمالي المنتجات المباعة</p>
+</div>
+
+<div class="card">
+    <h3 id="stockValue">0</h3>
+    <p>قيمة المخزون</p>
+</div>
+
+<div class="card">
+    <h3 id="topProduct">لا يوجد</h3>
+    <p>الأكثر مبيعًا</p>
+</div>
+
+<div class="card">
+    <h3 id="lowStock">0</h3>
+    <p>منتجات قليلة المخزون</p>
+</div>
+
+</div>
+
+<div
+id="stockWarning"
+style="
+display:none;
+margin-top:20px;
+padding:15px;
+border-radius:12px;
+background:#fff3cd;
+border:1px solid #ffe69c;
+font-weight:bold;
+color:#856404;
+">
+</div>
+
+</section>
+<!-- ==========================================
+     إدارة المنتجات
+========================================== -->
+
+<section id="products" class="page" style="display:none;">
+
+<h2>📦 إدارة المنتجات</h2>
+
+<div class="product-form">
+
+<input
+type="text"
+id="productName"
+placeholder="اسم المنتج">
+
+<input
+type="text"
+id="productBrand"
+placeholder="الماركة">
+
+<select id="productCategory">
+
+<option>هواتف</option>
+<option>إكسسوارات</option>
+<option>مودمات</option>
+<option>بطاريات</option>
+
+</select>
+
+<input
+type="number"
+id="productPrice"
+placeholder="السعر الحالي">
+
+<input
+type="number"
+id="productOldPrice"
+placeholder="السعر قبل الخصم">
+
+<input
+type="number"
+id="productStock"
+placeholder="الكمية المتوفرة">
+
+<textarea
+id="productDescription"
+placeholder="وصف المنتج">
+</textarea>
+
+<label>صورة المنتج</label>
+
+<input
+type="file"
+id="productImage"
+accept="image/*">
+
+<img
+id="previewImage"
+src=""
+style="
+display:none;
+width:140px;
+height:140px;
+margin-top:15px;
+border-radius:12px;
+object-fit:cover;
+border:1px solid #ddd;
+">
+
+<div class="options">
+
+<label>
+<input
+type="checkbox"
+id="featured">
+منتج مميز
+</label>
+
+<label>
+<input
+type="checkbox"
+id="newProduct">
+منتج جديد
+</label>
+
+</div>
+
+<button id="saveProduct">
+💾 حفظ المنتج
+</button>
+
+</div>
+
+<hr>
+
+<h3>📋 قائمة المنتجات</h3>
+
+<div id="productsTable">
+
+<div style="text-align:center;padding:30px;color:#888;">
+لا توجد منتجات.
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     إدارة التصنيفات
+========================================== -->
+
+<section id="categories" class="page" style="display:none;">
+
+<h2>🏷️ إدارة التصنيفات</h2>
+
+<div class="card">
+
+<input
+type="text"
+id="newCategory"
+placeholder="أدخل اسم التصنيف الجديد">
+
+<button id="addCategory">
+➕ إضافة تصنيف
+</button>
+
+</div>
+
+<hr>
+
+<h3>📋 قائمة التصنيفات</h3>
+
+<div id="categoryList">
+
+<div style="text-align:center;padding:30px;color:#888;">
+
+لا توجد تصنيفات.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     إدارة الطلبات
+========================================== -->
+
+<section id="orders" class="page" style="display:none;">
+
+<h2>📦 إدارة الطلبات</h2>
+
+<input
+type="text"
+id="searchOrder"
+placeholder="🔍 ابحث باسم العميل أو رقم الهاتف..."
+style="
+width:100%;
+padding:12px;
+margin:15px 0;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+">
+
+<div id="ordersTable">
+
+<div style="text-align:center;padding:40px;color:#888;">
+
+لا توجد طلبات حالياً
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+     إعدادات المتجر
+========================================== -->
+
+<section id="settings" class="page" style="display:none;">
+
+<h2>⚙️ إعدادات المتجر</h2>
+
+<div class="card">
+
+<h3>الإعدادات العامة</h3>
+
+<p>
+يمكنك تغيير اسم المتجر، الشعار، البنر، الألوان،
+ووضع المتجر من خلال صفحة الإعدادات.
+</p>
+
+<button id="openSettings">
+
+⚙️ فتح صفحة الإعدادات
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     التواصل الاجتماعي
+========================================== -->
+
+<section id="social" class="page" style="display:none;">
+
+<h2>🌐 روابط التواصل</h2>
+
+<div class="card">
+
+<h3>إدارة روابط المتجر</h3>
+
+<p>
+
+قم بإضافة أو تعديل روابط:
+
+</p>
+
+<ul style="line-height:2;">
+
+<li>📱 واتساب</li>
+
+<li>📘 فيسبوك</li>
+
+<li>📸 إنستجرام</li>
+
+<li>✈️ تيليجرام</li>
+
+<li>▶️ يوتيوب</li>
+
+</ul>
+
+<button id="openSocial">
+
+🌐 إدارة الروابط
+
+</button>
+
+</div>
+
+</section>
+</main>
+
+</div>
+
+<!-- ==========================================
+     ملفات JavaScript
+========================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/database.js"></script>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

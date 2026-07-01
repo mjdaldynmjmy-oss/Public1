@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>تفاصيل المنتج</title>
+
+<link rel="stylesheet"
+href="css/product.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="product-header">
+
+<a href="index.html">
+
+<i class="fas fa-arrow-right"></i>
+
+العودة للمتجر
+
+</a>
+
+</header>
+
+<main class="product-container">
+
+<div class="product-image">
+
+<img
+id="productImage"
+src="images/no-image.png"
+alt="Product">
+
+</div>
+
+<div class="product-details">
+  <h1 id="productName">
+
+اسم المنتج
+
+</h1>
+
+<p id="productBrand">
+
+الماركة
+
+</p>
+
+<h2 id="productPrice">
+
+0 ريال
+
+</h2>
+
+<!-- حالة المخزون -->
+<div id="stockStatus" class="stock-status">
+
+🟢 متوفر
+
+</div>
+
+<p id="productDescription">
+
+وصف المنتج
+
+</p>
+
+<div class="product-buttons">
+
+<button id="addCartButton" class="cart-btn">
+
+🛒 أضف إلى السلة
+
+</button>
+
+<button id="buyButton" class="buy-btn">
+
+💬 شراء عبر واتساب
+
+</button>
+
+<button id="shareButton" class="share-btn">
+
+📤 مشاركة المنتج
+
+</button>
+
+</div>
+
+</div>
+
+</main>
+<!-- ==========================
+     المنتجات المشابهة
+========================== -->
+
+<section class="related-section">
+
+    <h2>
+
+        <i class="fas fa-box-open"></i>
+
+        منتجات مشابهة
+
+    </h2>
+
+    <div id="relatedProducts" class="products-grid">
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     العودة للأعلى
+========================== -->
+
+<button id="topButton" class="top-button">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+<!-- ==========================
+     ملفات JavaScript
+========================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/database.js"></script>
+
+<script src="js/product.js"></script>
+
+</body>
+
+</html>
